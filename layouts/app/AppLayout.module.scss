@@ -1,0 +1,17 @@
+@use '@styles/core/variables' as variables;
+
+.appLayout {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Montserrat', sans-serif;
+  color: variables.$color-black;
+
+  background-color: variables.$color-theme-foreground;
+
+  &__content {
+    flex: 1;
+  }  
+}
