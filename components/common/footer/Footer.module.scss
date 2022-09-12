@@ -1,27 +1,29 @@
 @use '@styles/core/variables' as variables;
 @import '@styles/core/interfaces/container';
 
-.navigation {
+.footer {
   padding: variables.$spacing-16;
 
   background-color: variables.$color-white;
-  box-shadow: rgb(72 72 72 / 20%) 0px 5px 15px 0px;
   
-  &__links {
+  &__items {
     @extend %container;
 
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 
-  &__link {
-    margin-right: variables.$spacing-32;
-    &:last-child { margin-right: 0; }
-
+  &__home {
+    margin-right: auto;
     font-size: 1.5rem;
   }
 
-  &__title {
-    margin-right: auto;
+  &__icon {
+    margin-right: variables.$spacing-24;
+
+    width: var(--size);
+    height: var(--size);
+
+    --size: 40px;
   }
 }
