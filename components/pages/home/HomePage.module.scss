@@ -1,0 +1,38 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.page {
+  @extend %container;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: min(100%, 520px);
+  width: 100%;
+
+  background-color: variables.$color-white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__image {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: variables.$spacing-24;
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}
