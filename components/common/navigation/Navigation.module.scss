@@ -1,0 +1,26 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.navigation {
+  padding: variables.$spacing-16;
+
+  background-color: variables.$color-white;
+  box-shadow: rgb(72 72 72 / 20%) 0px 5px 15px 0px;
+  &__links {
+    @extend %container;
+
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__link {
+    margin-right: variables.$spacing-32;
+    &:last-child { margin-right: 0; }
+
+    font-size: 1.5rem;
+  }
+
+  &__title {
+    margin-right: auto;
+  }
+}

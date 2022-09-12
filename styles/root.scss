@@ -1,0 +1,12 @@
+@use '@styles/core/variables' as variables;
+
+:root {
+  --color-theme-foreground: #{ variables.$color-theme-foreground-value };
+  --color-white: #{ variables.$color-white-value };
+  --color-black: #{ variables.$color-black-value };
+
+  --spacing-8: #{ variables.$spacing-8-value };
+  --spacing-16: #{ variables.$spacing-16-value };
+  --spacing-24: #{ variables.$spacing-24-value };
+  --spacing-32: #{ variables.$spacing-32-value };
+}
