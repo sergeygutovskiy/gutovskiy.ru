@@ -3,6 +3,7 @@ export type Styles = {
   'hero__content': string;
   'hero__image': string;
   'hero__name': string;
+  'hero__paragraph': string;
   'page': string;
 };
 

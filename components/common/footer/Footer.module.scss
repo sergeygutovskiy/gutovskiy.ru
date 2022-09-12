@@ -19,7 +19,8 @@
   }
 
   &__icon {
-    margin-right: variables.$spacing-24;
+    margin-right: variables.$spacing-32;
+    &:last-child { margin-right: 0; }
 
     width: var(--size);
     height: var(--size);

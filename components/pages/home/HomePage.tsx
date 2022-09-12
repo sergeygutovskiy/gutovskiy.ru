@@ -15,13 +15,17 @@ const HomePage: FC = () => {
               <Image
                 src={AvatarImage}
                 alt={'avatar'}
-                layout='fill'
                 objectFit='cover'
+                width={520}
+                height={520}
               />
           </div>
 
           <div className={styles.hero__content}>
             <h1 className={styles.hero__name}>Гутовский Сергей</h1>
+            <p className={styles.hero__paragraph}>
+              Занимаюсь web-разработкой <br /> 2.5 года ❤️
+            </p>
           </div>
         </div>
       </section>
