@@ -1,0 +1,6 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.wrapper {
+  @extend %container;
+}
