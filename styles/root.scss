@@ -5,9 +5,12 @@
   --color-white: #{ variables.$color-white-value };
   --color-black: #{ variables.$color-black-value };
   --color-grey: #{ variables.$color-grey-value };
+  --color-grey-light: #{ variables.$color-grey-light-value };
 
   --spacing-8: #{ variables.$spacing-8-value };
   --spacing-16: #{ variables.$spacing-16-value };
   --spacing-24: #{ variables.$spacing-24-value };
   --spacing-32: #{ variables.$spacing-32-value };
+  --spacing-48: #{ variables.$spacing-48-value };
+  --spacing-64: #{ variables.$spacing-64-value };
 }

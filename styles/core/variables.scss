@@ -2,11 +2,15 @@ $spacing-8-value:   8px;
 $spacing-16-value:  16px;
 $spacing-24-value:  24px;
 $spacing-32-value:  32px;
+$spacing-48-value:  48px;
+$spacing-64-value:  64px;
 
 $spacing-8: var(--spacing-8);
 $spacing-16: var(--spacing-16);
 $spacing-24: var(--spacing-24);
 $spacing-32: var(--spacing-32);
+$spacing-48: var(--spacing-48);
+$spacing-64: var(--spacing-64);
 
 // 
 
@@ -14,8 +18,23 @@ $color-theme-foreground-value: #D6E6F2;
 $color-white-value: #FFFFFF;
 $color-black-value: #333333;
 $color-grey-value: #666666;
+$color-grey-light-value: #c3c3c3;
  
 $color-theme-foreground: var(--color-theme-foreground);
 $color-white: var(--color-white);
 $color-black: var(--color-black);
 $color-grey: var(--color-grey);
+$color-grey-light: var(--color-grey-light);
+
+// 
+
+$color-note-theme-1: #FF9A71;
+$color-note-theme-2: #FE6969;
+$color-note-theme-3: #ADDD48;
+$color-note-theme-4: #3DCF8E;
+$color-note-theme-5: #44B2E8;
+$color-note-theme-6: #7795F8;
+$color-note-theme-7: #A78CE9;
+$color-note-theme-8: #ED91EF;
+$color-note-theme-9: #CB77DB;
+$color-note-theme-10: #8898A9;

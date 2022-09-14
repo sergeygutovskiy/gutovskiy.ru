@@ -1,0 +1,63 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.list {
+  @extend %container;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-16;
+
+  &__item {
+    position: relative;
+
+    min-width: 100px;
+    padding: variables.$spacing-16 variables.$spacing-24;
+
+    text-align: left;
+    font-weight: 400;
+
+    background-color: variables.$color-white;
+    border: solid 1px variables.$color-grey-light;
+    border-radius: 12px;
+
+    transition: opacity 200ms linear;
+
+    &[data-active="false"] {
+      opacity: 0.25;
+    }
+  }
+
+  &__bullets {
+    position: absolute;
+    right: calc(var(--bullet-size) / -2);
+    bottom: calc(var(--bullet-size) / -2);
+
+    display: flex;
+    gap: 4px;
+
+    --bullet-size: 12px;
+  }
+
+  &__bullet {
+    content: '';
+
+    width: var(--bullet-size);
+    height: var(--bullet-size);
+
+    background-color: var(--theme-color, #FFEEAF);
+    border: solid 1px variables.$color-black;
+    border-radius: 50%;
+
+    &[data-theme="1"] { --theme-color: #{variables.$color-note-theme-1}; }
+    &[data-theme="2"] { --theme-color: #{variables.$color-note-theme-2}; }
+    &[data-theme="3"] { --theme-color: #{variables.$color-note-theme-3}; }
+    &[data-theme="4"] { --theme-color: #{variables.$color-note-theme-4}; }
+    &[data-theme="5"] { --theme-color: #{variables.$color-note-theme-5}; }
+    &[data-theme="6"] { --theme-color: #{variables.$color-note-theme-6}; }
+    &[data-theme="7"] { --theme-color: #{variables.$color-note-theme-7}; }
+    &[data-theme="8"] { --theme-color: #{variables.$color-note-theme-8}; }
+    &[data-theme="9"] { --theme-color: #{variables.$color-note-theme-9}; }
+    &[data-theme="10"] { --theme-color: #{variables.$color-note-theme-10}; }
+  }
+}

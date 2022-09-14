@@ -1,0 +1,19 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.container {
+  @extend %container;
+
+  margin-top: variables.$spacing-64;
+  margin-bottom: variables.$spacing-64;
+
+  display: flex;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
