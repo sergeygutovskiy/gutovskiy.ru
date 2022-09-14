@@ -2,6 +2,7 @@
 @import '@styles/core/interfaces/container';
 
 .footer {
+  margin-top: variables.$spacing-64;
   padding: variables.$spacing-16;
 
   background-color: variables.$color-white;

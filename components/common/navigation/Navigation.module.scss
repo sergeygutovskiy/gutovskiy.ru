@@ -2,7 +2,12 @@
 @import '@styles/core/interfaces/container';
 
 .navigation {
-  padding: variables.$spacing-16;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+
+  margin-bottom: variables.$spacing-64;
+  padding: variables.$spacing-16 0;
 
   background-color: variables.$color-white;
   box-shadow: rgb(72 72 72 / 20%) 0px 5px 15px 0px;

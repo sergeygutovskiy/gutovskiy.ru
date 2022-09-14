@@ -4,7 +4,6 @@
 .container {
   @extend %container;
 
-  margin-top: variables.$spacing-64;
   margin-bottom: variables.$spacing-64;
 
   display: flex;
