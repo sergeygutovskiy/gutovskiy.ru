@@ -1,0 +1,160 @@
+@use '@styles/core/variables' as variables;
+@import '@styles/core/interfaces/container';
+
+.timeline {
+  @extend %container;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap);
+
+  overflow: hidden;
+
+  --circle-size: 32px;
+  --line-width: 3px;
+  --gap: #{variables.$spacing-32};
+
+  &__period {
+    grid-column: span 2;
+  }
+
+  &__project {
+    grid-column: span 3;
+  }
+
+  &__step {
+    grid-column: span 2;
+    position: relative;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: calc(var(--gap) / -2);
+      left: calc(var(--circle-size) / 2 - var(--line-width) / 2);
+  
+      width: var(--line-width);
+      height: var(--height);
+      background-color: variables.$color-black;
+
+      --height: calc(100% + var(--gap));
+    }
+  }
+
+  &__period[data-last="true"] ~ &__step::before {
+    content: none;
+  }
+}
+
+.period {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  align-items: center;
+ 
+  &::before {
+    content: '';
+
+    margin-right: variables.$spacing-32;
+
+    display: block;
+    min-width: var(--circle-size);
+    height: var(--circle-size);
+
+    background-color: variables.$color-theme-foreground;
+    border: solid 3px variables.$color-black;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--gap) / -2);
+    left: calc(var(--circle-size) / 2 - var(--line-width) / 2);
+
+    width: var(--line-width);
+    height: var(--height);
+
+    background-color: variables.$color-black;
+
+    --height: calc(100% + var(--gap));
+  }
+
+  &[data-first="true"]::after,
+  &[data-last="true"]::after {
+    height: calc(var(--height) / 2);
+  }
+
+  &[data-first="true"]::after { top: 50%; }
+  &[data-last="true"]::after { bottom: 50%; }
+
+  &__title {
+    margin-bottom: variables.$spacing-8;
+
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  &__paragraph {
+    max-width: 360px;
+    line-height: 1.5em;
+  }
+}
+
+.project {
+  padding: variables.$spacing-24;
+
+  background-color: variables.$color-white;
+  border-radius: 12px;
+
+  &__header {
+    margin-bottom: variables.$spacing-24;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__title {
+    margin-right: auto;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: variables.$spacing-24;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  &__paragraph {
+    margin-bottom: variables.$spacing-24;
+    line-height: 1.5em;
+  }
+
+  &__tags {
+    display: flex;
+    gap: variables.$spacing-8;
+  }
+
+  &__tag {
+    min-width: 100px;
+    padding: variables.$spacing-8;
+
+    text-align: center;
+    font-size: 0.875rem;
+    color: variables.$color-white;
+    
+    background-color: #769FCD;
+    border-radius: 16px;
+  }
+}
