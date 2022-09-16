@@ -1,0 +1,65 @@
+@use '@styles/core/variables' as variables;
+
+.wrapper {
+  overscroll-behavior-y: none;
+
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal {
+  max-width: 100%;
+  width: max(40%, min(600px, 100%));
+
+  padding: variables.$spacing-32;
+
+  background-color: variables.$color-white;
+
+  &__header {
+    margin-bottom: variables.$spacing-32;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__close {
+    position: relative;
+
+    width: var(--size);
+    height: var(--size);
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 75%;
+      height: 2px;
+
+      background-color: variables.$color-black;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotateZ(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotateZ(-45deg);
+    }
+
+    --size: 40px;
+  }
+}

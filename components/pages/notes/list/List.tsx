@@ -6,10 +6,11 @@ type Props = {
   categories: INoteCategory[],
   selectedCategoriesIds: number[],
   notes: INote[],
+  setNoteToRead: (note: any) => void,
 };
 
 const List: FC<Props> = props => {
-  const { notes, categories, selectedCategoriesIds } = props;
+  const { notes, categories, selectedCategoriesIds, setNoteToRead } = props;
 
   const themedNotes = notes.map(note => ({
     ...note,
@@ -23,7 +24,7 @@ const List: FC<Props> = props => {
     ...note,
     isSelected: selectedCategoriesIds.length === 0
       ? true
-      :  selectedCategoriesIds.every(category => note.categories.find(item => item.id === category) !== undefined),
+      :  selectedCategoriesIds.every(category => note.categories.find(item => item.id === category)),
   }));
 
   return (
@@ -35,6 +36,7 @@ const List: FC<Props> = props => {
             className={styles.list__item}
             data-active={note.isSelected}
             disabled={!note.isSelected}
+            onClick={() => setNoteToRead(note)}
           >
             {note.label}
 

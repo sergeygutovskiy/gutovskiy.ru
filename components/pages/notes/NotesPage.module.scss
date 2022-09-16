@@ -1,0 +1,17 @@
+.modal__enter {
+  opacity: 0;
+}
+
+.modal__enter_active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.modal__exit {
+  opacity: 1;
+}
+
+.modal__exit_active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

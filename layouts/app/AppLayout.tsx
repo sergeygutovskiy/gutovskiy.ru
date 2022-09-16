@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+
 import { Footer } from '@components/common/footer';
 import { Navigation } from '@components/common/navigation';
 
@@ -12,7 +13,7 @@ const AppLayout: FC<Props> = props => {
   const { children } = props;
 
   return (
-    <div className={styles.appLayout}>
+    <div className={styles.appLayout} id="app-layout">
       <Navigation />
 
       <div className={styles.appLayout__content}>
