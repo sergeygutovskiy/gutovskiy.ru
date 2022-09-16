@@ -1,3 +1,3 @@
-const reduceClasses = (...classList: string[]) => classList.filter(Boolean).join(' ');
+const reduceClasses = (...classList: any[]) => classList.filter(Boolean).flat(Infinity).join(' ');
 
 export default reduceClasses;

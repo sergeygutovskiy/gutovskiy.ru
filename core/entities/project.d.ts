@@ -1,7 +1,7 @@
 interface IProject {
   title: string,
+  image: string,
   link?: string,
-  image?: string,
   paragraph?: string,
   sources?: string,
   tags?: string[],
