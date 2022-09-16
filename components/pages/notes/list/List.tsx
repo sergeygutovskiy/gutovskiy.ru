@@ -23,7 +23,7 @@ const List: FC<Props> = props => {
     ...note,
     isSelected: selectedCategoriesIds.length === 0
       ? true
-      : note.categories.some(category => selectedCategoriesIds.includes(category.id)),
+      :  selectedCategoriesIds.every(category => note.categories.find(item => item.id === category) !== undefined),
   }));
 
   return (
