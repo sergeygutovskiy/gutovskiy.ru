@@ -1,4 +1,6 @@
 const notes: INote[] = [
+  { id: 28, categories: [ 1, 2 ], label: 'Mobile 100vh hack' },
+  { id: 27, categories: [ 7, 8 ], label: 'Refactoring Guru' },
   { id: 26, categories: [ 6, 8 ], label: 'Ahmad Shadeed' },
   { id: 25, categories: [ 10   ], label: 'iOS best architecture' },
   { id: 24, categories: [ 1, 3 ], label: 'Abort controller в React\'е' },
@@ -14,7 +16,7 @@ const notes: INote[] = [
   { id: 8,  categories: [ 4    ], label: 'Семантическая верстка' },
   { id: 9,  categories: [ 6    ], label: 'Callback Hell' },
   { id: 10, categories: [ 5    ], label: 'API' },
-  { id: 11, categories: [ 6    ], label: 'Авторизация или аутентификация' },
+  { id: 11, categories: [ 10   ], label: 'Авторизация или аутентификация' },
   { id: 12, categories: [ 2    ], label: 'CSS препроцессоры' },
   { id: 13, categories: [ 5    ], label: 'Dart - альтернатива JS' },
   { id: 14, categories: [ 2    ], label: 'Отмена загрузки картинок на определенных экранах' },
@@ -32,12 +34,29 @@ const notesCategories: INoteCategory[] = [
   { id: 4,  theme: '4' , label: 'Best-practies' },
   { id: 5,  theme: '5' , label: 'Технологии' },
   { id: 6,  theme: '6' , label: 'Интересное' },
+  { id: 7,  theme: '7' , label: 'Архитектура и проектирование' },
   { id: 8,  theme: '8' , label: 'Ресурсы' },
   { id: 10, theme: '10', label: 'Офтоп' },
 ];
 
 const fullNotes: IFullNote[] = [
   {
+    id: 28,
+    title: 'Mobile 100vh hack',
+    image: '/images/notes/100-vh-hack.webp',
+    links: [
+      'https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit',
+    ],
+    date: '19.09.2022',
+  }, {
+    id: 27,
+    title: 'refactoring.guru',
+    image: '/images/notes/refactoring.guru.png',
+    links: [
+      'https://refactoring.guru',
+    ],
+    date: '19.09.2022',
+  }, {
     id: 26,
     title: 'Ahmad Shadeed',
     image: '/images/notes/shadeed.jpg',
