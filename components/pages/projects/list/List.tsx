@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import { FC, Fragment } from 'react';
 
 import reduceClasses from '@lib/helpers/reduceClasses';
 
 import styles from './List.module.scss';
-import { Project } from './project';
+
+import { Project } from '.';
 
 type Props = {
   timeline: IProjectsTimelineItem[],

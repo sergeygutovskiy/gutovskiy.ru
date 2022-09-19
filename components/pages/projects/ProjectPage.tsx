@@ -1,6 +1,8 @@
+import { FC } from 'react';
+
 import { PageTitle } from '@components/common/page-title';
 import { AppLayout } from '@layouts/app';
-import { FC } from 'react';
+
 import { List } from './list';
 
 type Props = {

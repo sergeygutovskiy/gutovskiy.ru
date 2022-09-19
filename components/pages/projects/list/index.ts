@@ -1,2 +1,4 @@
 import List from './List';
-export { List };
+import { Project } from './project';
+
+export { List, Project };
