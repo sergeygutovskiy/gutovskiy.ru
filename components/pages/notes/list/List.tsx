@@ -7,11 +7,11 @@ type Props = {
   categories: INoteCategory[],
   selectedCategoriesIds: number[],
   notes: INote[],
-  setNoteToRead: (note: any) => void,
+  setNoteIdToRead: (noteId: number) => void,
 };
 
 const List: FC<Props> = props => {
-  const { notes, categories, selectedCategoriesIds, setNoteToRead } = props;
+  const { notes, categories, selectedCategoriesIds, setNoteIdToRead } = props;
 
   const themedNotes: IThemedNote[] = notes.map(note => ({
     ...note,
@@ -35,7 +35,7 @@ const List: FC<Props> = props => {
           <Item 
             key={note.id} 
             note={note} 
-            onClick={() => setNoteToRead(note)} 
+            onClick={() => setNoteIdToRead(note.id)} 
           />
         ))
       }

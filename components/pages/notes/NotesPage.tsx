@@ -1,9 +1,9 @@
-import { FC, useRef, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { AppLayout } from '@layouts/app';
 import { PageTitle } from '@components/common/page-title';
-
 import TitleImage from '@public/images/notes-cat.png';
+import useUrlHash from '@hooks/use-url-hash';
 
 import { CategoriesList, List, Modal } from '.';
 
@@ -20,10 +20,23 @@ const NotesPage: FC<Props> = props => {
   const removeSelectedCategory = (id: number) => setSelectedCategoriesIds(prev => [ ...prev.filter(categoryId => categoryId !== id) ]);
   const removeAllSelectedCategories = () => setSelectedCategoriesIds([]);
 
-  const [ noteToRead, setNoteToRead ] = useState<any>(null);
-  const removeNoteToRead = () => setNoteToRead(null);
+  const [ noteIdToRead, setNoteIdToRead ] = useState<number | null>(null);
+  const updateCurrentNoteToReadId = (noteId: number) => {
+    setNoteIdToRead(noteId);
+    location.hash = `${noteId}`;
+  };
+  const removeNoteToRead = () => {
+    setNoteIdToRead(null);
+    history.replaceState(null, '', ' ');
+  };
 
-  const modalRef = useRef(null);
+  const hash = useUrlHash();
+  const noteIdFromUrl = ( hash && !Number.isNaN(Number.parseInt(hash)) ) ? Number.parseInt(hash) : null;
+
+  useEffect(() => {
+    if ( noteIdFromUrl === null ) return;
+    setNoteIdToRead(noteIdFromUrl);
+  }, [ noteIdFromUrl ]);
 
   return (
     <AppLayout>
@@ -41,11 +54,11 @@ const NotesPage: FC<Props> = props => {
         categories={categories}
         selectedCategoriesIds={selectedCategoriesIds}
         notes={notes}
-        setNoteToRead={setNoteToRead}
+        setNoteIdToRead={updateCurrentNoteToReadId}
       />
 
       <Modal
-        noteId={noteToRead?.id ?? null}
+        noteId={noteIdToRead}
         onClose={() => removeNoteToRead()}
       />
     </AppLayout>
