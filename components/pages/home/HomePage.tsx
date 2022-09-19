@@ -24,7 +24,7 @@ const HomePage: FC = () => {
           <div className={styles.hero__content}>
             <h1 className={styles.hero__name}>Гутовский Сергей</h1>
             <p className={styles.hero__paragraph}>
-              Занимаюсь web-разработкой <br /> 2.5 года ❤️
+              Занимаюсь коммерческой web-разработкой <br /> 2.5 года ❤️
             </p>
           </div>
         </div>
