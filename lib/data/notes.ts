@@ -139,7 +139,9 @@ const fullNotes: IFullNote[] = [
     title: 'Отмена загрузки картинок на определенных экранах',
     image: '',
     description: 'Бывает, что на экране определенного размера нужно прятать изображение. Это можно сделать через display: none, но у такого подхода есть недостаток: картинка все равно будет загружаться хоть и не показываться. Есть решение получше, использующее современный тэг picture, которое позволяет избавиться от этой проблемы (пусть и через некий костыль ).',
-    links: [],
+    links: [
+      'https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e',
+    ],
     date: '16.07.2021',
   }, {
     id: 15,
@@ -153,7 +155,9 @@ const fullNotes: IFullNote[] = [
     title: 'Соотношение сторон в картинках',
     image: '/images/notes/share-crop-aspect-ratio.jpg',
     description: 'Как делать адаптивные картинки с определенным соотношением сторон используя костыль с padding или новое свойство aspect-ratio.',
-    links: [],
+    links: [
+      'https://css-tricks.com/aspect-ratio-boxes',
+    ],
     date: '11.07.2021',
   }, {
     id: 17,
@@ -167,14 +171,19 @@ const fullNotes: IFullNote[] = [
     title: 'RTL и LTR',
     image: '/images/notes/rtl-ltr.jpg',
     description: 'Эти термины всплывают, когда речь заходит о поддержке на сайте арабской вязи, иероглифов и других странных языков.',
-    links: [],
+    links: [
+      'https://habr.com/ru/post/484886',
+    ],
     date: '05.06.2021',
   }, {
     id: 19,
     title: 'Webpack',
     image: '/images/notes/webpack.png',
     description: 'Инструмент, который поможет избавиться от 45 запущенных в консоли фоновых процессов для сборки проекта. Все настраиваться через один файл конфига.',
-    links: [],
+    links: [
+      'https://habr.com/ru/post/514838',
+      'https://medium.com/js-imaginea/webpack-why-and-what-4948433cc2d3'
+    ],
     date: '01.06.2021',
   },
 ];

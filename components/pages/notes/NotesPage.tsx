@@ -45,7 +45,7 @@ const NotesPage: FC<Props> = props => {
       />
 
       <Modal
-        note={noteToRead}
+        noteId={noteToRead?.id ?? null}
         onClose={() => removeNoteToRead()}
       />
     </AppLayout>

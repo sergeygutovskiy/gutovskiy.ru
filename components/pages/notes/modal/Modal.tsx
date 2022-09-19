@@ -1,37 +1,26 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-
-import { Modal as CommonModal } from '@components/common/modal';
-
-import styles from './Modal.module.scss';
 import Image from 'next/image';
 
+import { Modal as CommonModal } from '@components/common/modal';
+import useApiFullNote from '@hooks/use-api-full-note';
+
+import styles from './Modal.module.scss';
+
 type Props = {
-  note: INote | null,
+  noteId: number | null,
   onClose: () => void,
 };
 
 const Modal: FC<Props> = props => {
-  const { note, onClose } = props;
+  const { noteId, onClose } = props;
 
   const modalRef = useRef(null);
-  const [ fullNote, setFullNote ] = useState<IFullNote | null>(null);
-
-  useEffect(() => {
-    if ( !note ) return;
-
-    const getNote = async () => {
-      const response = await fetch(`/api/notes/${note.id}/full`);
-      const fullNote = await response.json();
-      setFullNote(fullNote);
-    };
-
-    getNote();
-  }, [ note ]);
+  const fullNote = useApiFullNote(noteId);
 
   return (
     <CSSTransition
-      in={!!note}
+      in={noteId !== null}
       timeout={200}
       nodeRef={modalRef}
       classNames={{

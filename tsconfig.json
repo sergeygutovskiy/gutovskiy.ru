@@ -21,6 +21,7 @@
       "@components/*": [ "components/*" ],
       "@layouts/*": [ "layouts/*" ],
       "@lib/*": [ "lib/*" ],
+      "@hooks/*": [ "hooks/*" ],
       "@public/*": [ "public/*" ]
     }
   },
