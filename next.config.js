@@ -10,19 +10,7 @@ const nextConfig = {
     });
 
     return config;
-  },
-
-  images: {
-    domains: [
-      'gutovskiy.ru',
-      'sun9-8.userapi.com',
-      'sun9-72.userapi.com',
-      'sun9-79.userapi.com',
-      'sun9-21.userapi.com',
-      'sun9-10.userapi.com',
-      'sun9-15.userapi.com'
-    ],
-  },
+  }
 };
 
 module.exports = nextConfig;
