@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 button:not(:disabled) {
   cursor: pointer;
 }

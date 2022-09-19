@@ -1,17 +1,75 @@
-.modal__enter {
-  opacity: 0;
-}
+@use '@styles/core/variables' as variables;
+
+.modal__enter { opacity: 0; }
 
 .modal__enter_active {
   opacity: 1;
   transition: opacity 200ms;
 }
 
-.modal__exit {
-  opacity: 1;
-}
+.modal__exit { opacity: 1; }
 
 .modal__exit_active {
   opacity: 0;
   transition: opacity 200ms;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  
+
+  &__title {
+    margin-bottom: variables.$spacing-16;
+
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  &__date {
+    margin-bottom: variables.$spacing-32;
+    
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: variables.$spacing-32;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: variables.$color-theme-foreground;
+  }
+
+  &__description {
+    margin-bottom: variables.$spacing-32;
+
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+
+  &__subtitle {
+    margin-bottom: variables.$spacing-8;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-8;
+  }
+
+  &__link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-transform: uppercase;
+    font-family: monospace;
+    line-height: 1.5em;
+    font-size: 1rem;
+  }
 }
