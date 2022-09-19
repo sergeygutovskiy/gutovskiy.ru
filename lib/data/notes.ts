@@ -1,36 +1,85 @@
 const notes: INote[] = [
-  { id: 1,  categories: [ 2 ], label: 'HSL: цвета для программистов' },
-  { id: 2,  categories: [ 2 ], label: 'White-space, overflow-wrap, text-overflow, word-break' },
-  { id: 3,  categories: [ 4 ], label: 'Хеширование названий js / css файлов' },
-  { id: 4,  categories: [ 4, 6 ], 'label': 'Progressive JPEG' },
-  { id: 5,  categories: [ 1 ], label: 'Детали работы событий в JS' },
-  { id: 6,  categories: [ 4 ], label: 'Клавиатурная навигация' },
-  { id: 7,  categories: [ 2 ], label: 'Ловушка загрузки шрифтов' },
-  { id: 8,  categories: [ 4 ], label: 'Семантическая верстка' },
-  { id: 9,  categories: [ 6 ], label: 'Callback Hell' },
-  { id: 10, categories: [ 5 ], label: 'API' },
-  { id: 11, categories: [ 6 ], label: 'Авторизация или аутентификация' },
-  { id: 12, categories: [ 2 ], label: 'CSS препроцессоры' },
-  { id: 13, categories: [ 5 ], label: 'Dart - альтернатива JS' },
-  { id: 14, categories: [ 2 ], label: 'Отмена загрузки картинок на определенных экранах' },
-  { id: 15, categories: [ 2 ], label: 'Mobile / Desktop first' },
-  { id: 16, categories: [ 2 ], label: 'Соотношение сторон в картинках' },
-  { id: 17, categories: [ 4 ], label: 'FCP и беда LCP' },
+  { id: 26, categories: [ 6, 8 ], label: 'Ahmad Shadeed' },
+  { id: 25, categories: [ 10   ], label: 'iOS best architecture' },
+  { id: 24, categories: [ 1, 3 ], label: 'Abort controller в React\'е' },
+  { id: 23, categories: [ 1    ], label: 'Abort controller' },
+  { id: 22, categories: [ 8    ], label: 'Vladimir Klepov as a Coder' },
+  { id: 1,  categories: [ 2    ], label: 'HSL: цвета для программистов' },
+  { id: 2,  categories: [ 2    ], label: 'White-space, overflow-wrap, text-overflow, word-break' },
+  { id: 3,  categories: [ 4    ], label: 'Хеширование названий js / css файлов' },
+  { id: 4,  categories: [ 4, 6 ], label: 'Progressive JPEG' },
+  { id: 5,  categories: [ 1    ], label: 'Детали работы событий в JS' },
+  { id: 6,  categories: [ 4    ], label: 'Клавиатурная навигация' },
+  { id: 7,  categories: [ 2    ], label: 'Ловушка загрузки шрифтов' },
+  { id: 8,  categories: [ 4    ], label: 'Семантическая верстка' },
+  { id: 9,  categories: [ 6    ], label: 'Callback Hell' },
+  { id: 10, categories: [ 5    ], label: 'API' },
+  { id: 11, categories: [ 6    ], label: 'Авторизация или аутентификация' },
+  { id: 12, categories: [ 2    ], label: 'CSS препроцессоры' },
+  { id: 13, categories: [ 5    ], label: 'Dart - альтернатива JS' },
+  { id: 14, categories: [ 2    ], label: 'Отмена загрузки картинок на определенных экранах' },
+  { id: 15, categories: [ 2    ], label: 'Mobile / Desktop first' },
+  { id: 16, categories: [ 2    ], label: 'Соотношение сторон в картинках' },
+  { id: 17, categories: [ 4    ], label: 'FCP и беда LCP' },
   { id: 18, categories: [ 4, 6 ], label: 'RTL и LTR' },
-  { id: 19, categories: [ 5 ], label: 'Webpack' },
+  { id: 19, categories: [ 5    ], label: 'Webpack' },
 ];
 
 const notesCategories: INoteCategory[] = [
-  { id: 1, theme: '1', label: 'JS' },
-  { id: 2, theme: '2', label: 'CSS' },
-  { id: 3, theme: '3', label: 'React' },
-  { id: 4, theme: '4', label: 'Best-practies' },
-  { id: 5, theme: '5', label: 'Технологии' },
-  { id: 6, theme: '6', label: 'Интересное' },
+  { id: 1,  theme: '1' , label: 'JS' },
+  { id: 2,  theme: '2' , label: 'CSS' },
+  { id: 3,  theme: '3' , label: 'React' },
+  { id: 4,  theme: '4' , label: 'Best-practies' },
+  { id: 5,  theme: '5' , label: 'Технологии' },
+  { id: 6,  theme: '6' , label: 'Интересное' },
+  { id: 8,  theme: '8' , label: 'Ресурсы' },
+  { id: 10, theme: '10', label: 'Офтоп' },
 ];
 
 const fullNotes: IFullNote[] = [
   {
+    id: 26,
+    title: 'Ahmad Shadeed',
+    image: '/images/notes/shadeed.jpg',
+    links: [
+      'https://ishadeed.com/',
+    ],
+    date: '19.09.2022',
+  }, {
+    id: 25,
+    title: 'iOS best architecture',
+    image: '/images/notes/ios-best.jpg',
+    links: [
+      'https://github.com/Exey/iOS-Best-Architecture',
+    ],
+    date: '19.09.2022',
+  }, {
+    id: 24,
+    title: 'Abort controller в React\'е',
+    image: '/images/notes/abort-controller-in-react.png',
+    description: 'Пример использования abort controller\'а для предотвращения изменения стейта в анмантированных компонентах.',
+    links: [
+      'https://medium.com/@cis.bart/react-abort-controller-and-onclick-async-calls-aa4776772262',
+    ],
+    date: '19.09.2022',
+  }, {
+    id: 23,
+    title: 'Abort controller',
+    image: '',
+    description: 'Инструмент, позволяющий програмно останавливать сетевые запросы.',
+    links: [
+      'https://developer.mozilla.org/ru/docs/Web/API/AbortController'
+    ],
+    date: '19.09.2022',
+  }, {
+    id: 22,
+    title: 'Vladimir Klepov as a Coder',
+    description: 'Хороший сайт с заметками и статьями по фронту.',
+    links: [
+      'https://blog.thoughtspile.tech/',
+    ],
+    date: '19.09.2022',
+  }, {
     id: 1,
     title: 'HSL: цвета для программистов',
     image: '/images/notes/hsl.jpg',
@@ -42,7 +91,6 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 2,
     title: 'White-space, overflow-wrap, text-overflow, word-break',
-    image: '',
     description: 'Много свойств для всевозможного регулирования перекрытия и переноса текста в блоках.',
     links: [
       'https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow',
@@ -54,9 +102,7 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 3,
     title: 'Хеширование названий js / css файлов',
-    image: '',
     description: 'Делаем из app.css app-ad13sdsf23.css, и избавляем пользователей от проблемы использования закешированных старых ресурсов',
-    links: [],
     date: '21.08.2021',
   }, {
     id: 4,
@@ -70,7 +116,6 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 5,
     title: 'Детали работы событий в JS',
-    image: '',
     description: 'Всплытие, погружение, делегирование и значение других умных слов.',
     links: [
       'https://learn.javascript.ru/events',
@@ -80,7 +125,7 @@ const fullNotes: IFullNote[] = [
     id: 6,
     title: 'Клавиатурная навигация',
     image: '/images/notes/focus-tree.png',
-    description: 'По интерактивным элементам сайта можно перемещаться используя tab`ы. Для выделения текущего активного элемента на странице используется состояние :focus. Как правило разработчики забивают на оформление этого свойства, что приводит к плохому опыту пользования у юзеров.',
+    description: 'По интерактивным элементам сайта можно перемещаться используя tab\'ы. Для выделения текущего активного элемента на странице используется состояние :focus. Как правило разработчики забивают на оформление этого свойства, что приводит к плохому опыту пользования у юзеров.',
     links: [
       'https://www.okta.com/identity-101/authentication-vs-authorization',
     ],
@@ -88,56 +133,54 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 7,
     title: 'Ловушка загрузки шрифтов',
-    image: '',
     description: 'При использовании внешних шрифтов (тех, что нет в системе пользователя) может возникнуть ряд проблем из-за длительной загрузки этих шрифтов: сдвиг контента, временное отсутствие какого-либо текста и т.д. Поэтому важно понимать, как в целом браузер работает со шрифтами и как можно менять это поведение.',
-    links: [],
     date: '13.08.2021',
   }, {
     id: 8,
     title: 'Семантическая верстка',
     image: '/images/notes/semantic-html.jpg',
-    description: 'Как избавиться от бесконечных div`ов в html разметке и сделать её более читаемой и доступной.',
-    links: [],
+    description: 'Как избавиться от бесконечных div\'ов в html разметке и сделать её более читаемой и доступной.',
     date: '10.08.2021',
   }, {
     id: 9,
     title: 'Callback Hell',
     image: '/images/notes/callback-hell.png',
-    description: '',
-    links: [],
     date: '8.08.2021',
   }, {
     id: 10,
     title: 'API',
-    image: '',
     description: 'Как сделать функции вашего приложения доступными для других сервисов.',
-    links: [],
+    links: [
+      'https://habr.com/ru/post/464261',
+    ],
     date: '5.08.2021',
   }, {
     id: 11,
     title: 'Авторизация или аутентификация',
-    image: '',
     description: 'В общих словах: авторизация - проверка входа пользователя в свой аккаунт, аутентификация - выставление пользователю определенных ролей, прав доступа.',
-    links: [],
+    links: [
+      'https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization',
+    ],
     date: '01.08.2021',
   }, {
     id: 12,
     title: 'CSS препроцессоры',
-    image: '',
     description: 'Как внести в написание стилей чуть-чуть больше программирования с функциями, классами и даже наследованием.',
-    links: [],
+    links: [
+      'https://www.freecodecamp.org/news/css-preprocessors',
+    ],
     date: '30.07.2021',
   }, {
     id: 13,
     title: 'Dart - альтернатива JS',
-    image: '',
-    description: 'Google сделала свой язык, который можно использовать для web`а и мобильной кроссплатформенной разработки.',
-    links: [],
+    description: 'Google сделала свой язык, который можно использовать для web\'а и мобильной кроссплатформенной разработки.',
+    links: [
+      'https://dart.dev/overview',
+    ],
     date: '21.07.2021',
   }, {
     id: 14,
     title: 'Отмена загрузки картинок на определенных экранах',
-    image: '',
     description: 'Бывает, что на экране определенного размера нужно прятать изображение. Это можно сделать через display: none, но у такого подхода есть недостаток: картинка все равно будет загружаться хоть и не показываться. Есть решение получше, использующее современный тэг picture, которое позволяет избавиться от этой проблемы (пусть и через некий костыль ).',
     links: [
       'https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e',
@@ -146,9 +189,10 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 15,
     title: 'Mobile / Desktop first',
-    image: '',
     description: 'Сайт можно делать для ПК и адаптировать под мобилки, а можно и наоборот: сперва под телефон, затем - под ПК. Существует ряд критериев, чтобы определить каким из подходов стоит пользоваться.',
-    links: [],
+    links: [
+      'https://ishadeed.com/article/the-state-of-mobile-first-and-desktop-first',
+    ],
     date: '15.07.2021',
   }, {
     id: 16,
@@ -164,7 +208,6 @@ const fullNotes: IFullNote[] = [
     title: 'FCP и беда LCP',
     image: '/images/notes/fcp-lcp.jpg',
     description: 'Как узнать, за какое среднее время пользователю показывается ваш сайт (FCP), а также как решить проблему с долгой отрисовкой страницы (LCP).',
-    links: [],
     date: '10.07.2021',
   }, {
     id: 18,

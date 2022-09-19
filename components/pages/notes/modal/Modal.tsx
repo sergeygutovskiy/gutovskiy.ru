@@ -52,7 +52,7 @@ const Modal: FC<Props> = props => {
                     <Image
                       src={fullNote.image}
                       layout='fill'
-                      objectFit='contain'
+                      objectFit='scale-down'
                       alt={fullNote.title}
                     />
                   </div>
