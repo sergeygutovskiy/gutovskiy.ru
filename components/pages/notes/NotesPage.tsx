@@ -1,16 +1,11 @@
 import { FC, useRef, useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
 
 import { AppLayout } from '@layouts/app';
 import { PageTitle } from '@components/common/page-title';
-import { Modal } from '@components/common/modal';
 
 import TitleImage from '@public/images/notes-cat.png';
 
-import { CategoriesList } from './categories-list';
-import { List } from './list';
-
-import styles from './NotesPage.module.scss';
+import { CategoriesList, List, Modal } from '.';
 
 type Props = {
   notes: INote[],
@@ -29,7 +24,7 @@ const NotesPage: FC<Props> = props => {
   const removeNoteToRead = () => setNoteToRead(null);
 
   const modalRef = useRef(null);
-  
+
   return (
     <AppLayout>
       <PageTitle text='Заметки' img={TitleImage.src} />
@@ -49,25 +44,10 @@ const NotesPage: FC<Props> = props => {
         setNoteToRead={setNoteToRead}
       />
 
-      <CSSTransition
-        in={!!noteToRead}
-        timeout={200}
-        nodeRef={modalRef}
-        classNames={{
-          enter: styles.modal__enter,
-          enterActive: styles.modal__enter_active,
-          exit: styles.modal__exit,
-          exitActive: styles.modal__exit_active,
-        }}
-        unmountOnExit
-      >
-        <Modal
-          ref={modalRef}
-          onClose={removeNoteToRead}
-        >
-          Hello
-        </Modal>
-      </CSSTransition>
+      <Modal
+        note={noteToRead}
+        onClose={() => removeNoteToRead()}
+      />
     </AppLayout>
   );
 };

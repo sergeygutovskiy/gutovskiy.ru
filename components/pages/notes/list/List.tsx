@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Item } from './item';
 
 import styles from './List.module.scss';
 
@@ -12,7 +13,7 @@ type Props = {
 const List: FC<Props> = props => {
   const { notes, categories, selectedCategoriesIds, setNoteToRead } = props;
 
-  const themedNotes = notes.map(note => ({
+  const themedNotes: IThemedNote[] = notes.map(note => ({
     ...note,
     categories: note.categories.map(category => ({ 
       id: category,
@@ -20,7 +21,7 @@ const List: FC<Props> = props => {
     }))
   }));
 
-  const notesWithSelectedField = themedNotes.map(note => ({
+  const notesWithSelectedField: ISelctableNote[] = themedNotes.map(note => ({
     ...note,
     isSelected: selectedCategoriesIds.length === 0
       ? true
@@ -31,27 +32,11 @@ const List: FC<Props> = props => {
     <div className={styles.list}>
       {
         notesWithSelectedField.map(note => (
-          <button
-            key={note.id}
-            className={styles.list__item}
-            data-active={note.isSelected}
-            disabled={!note.isSelected}
-            onClick={() => setNoteToRead(note)}
-          >
-            {note.label}
-
-            <div className={styles.list__bullets} aria-hidden='true'>
-              {
-                note.categories.map(category => (
-                  <span 
-                    key={category.id}
-                    className={styles.list__bullet}
-                    data-theme={category.theme}
-                  />
-                ))
-              }
-            </div>
-          </button>
+          <Item 
+            key={note.id} 
+            note={note} 
+            onClick={() => setNoteToRead(note)} 
+          />
         ))
       }
     </div>

@@ -1,5 +1,7 @@
 export type Styles = {
-  'list': string;
+  'item': string;
+  'item__bullet': string;
+  'item__bullets': string;
 };
 
 export type ClassNames = keyof Styles;
