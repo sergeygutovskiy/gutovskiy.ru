@@ -1,4 +1,5 @@
 @use '@styles/core/variables' as variables;
+@use '@styles/core/mixins' as mixins;
 
 .project {
   padding: variables.$spacing-24;
@@ -12,6 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    row-gap: variables.$spacing-8;
+    column-gap: variables.$spacing-32;
   }
 
   &__title {
