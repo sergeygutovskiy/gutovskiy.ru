@@ -19,7 +19,13 @@
 
   &__home {
     margin-right: auto;
+
+    font-family: monospace;
     font-size: 1.5rem;
+
+    @include mixins.media-mobile {
+      font-size: 1.25rem;
+    }
   }
 
   &__icons {

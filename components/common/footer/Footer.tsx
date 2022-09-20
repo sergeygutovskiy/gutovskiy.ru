@@ -12,7 +12,7 @@ const Footer: FC = () => {
     <footer className={styles.footer}>
       <div className={styles.footer__items}>
         <Link href='/'>
-          <a className={styles.footer__home}>gutovskiy.ru</a>
+          <a className={styles.footer__home}>GUTOVSKIY.RU</a>
         </Link>
 
         <div className={styles.footer__icons}>
