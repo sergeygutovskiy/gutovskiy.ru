@@ -17,12 +17,14 @@ const PageTitle: FC<Props> = props => {
       
       {
         img &&
-        <Image
-          src={img}
-          width={160}
-          height={160}
-          alt={text}
-        />
+        <div className={styles.container__image}>
+          <Image
+            src={img}
+            width={160}
+            height={160}
+            alt={text}
+          />
+        </div>
       }
     </section>
   );

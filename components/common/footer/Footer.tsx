@@ -15,17 +15,19 @@ const Footer: FC = () => {
           <a className={styles.footer__home}>gutovskiy.ru</a>
         </Link>
 
-        <a className={styles.footer__icon} href="https://www.instagram.com/gutovskiy.ru">
-          <InstaIcon />
-        </a>
+        <div className={styles.footer__icons}>
+          <a className={styles.footer__icon} href="https://www.instagram.com/gutovskiy.ru">
+            <InstaIcon />
+          </a>
 
-        <a className={styles.footer__icon} href="https://vk.com/gutovskiyru">
-          <VKIcon />
-        </a>
+          <a className={styles.footer__icon} href="https://vk.com/gutovskiyru">
+            <VKIcon />
+          </a>
 
-        <a className={styles.footer__icon} href="https://t.me/gutovskiy_ru">
-          <TgIcon />
-        </a>
+          <a className={styles.footer__icon} href="https://t.me/gutovskiy_ru">
+            <TgIcon />
+          </a>
+        </div>
       </div>
     </footer>
   );

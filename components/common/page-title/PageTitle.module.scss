@@ -1,4 +1,5 @@
 @use '@styles/core/variables' as variables;
+@use '@styles/core/mixins' as mixins;
 @import '@styles/core/interfaces/container';
 
 .container {
@@ -14,5 +15,15 @@
 
     font-size: 3rem;
     font-weight: 500;
+
+    @include mixins.media-mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__image {
+    @include mixins.media-mobile {
+      display: none;
+    }
   }
 }

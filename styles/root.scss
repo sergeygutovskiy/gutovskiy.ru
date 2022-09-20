@@ -1,4 +1,5 @@
 @use '@styles/core/variables' as variables;
+@use '@styles/core/mixins' as mixins;
 
 :root {
   --color-theme-foreground: #{ variables.$color-theme-foreground-value };
@@ -7,10 +8,19 @@
   --color-grey: #{ variables.$color-grey-value };
   --color-grey-light: #{ variables.$color-grey-light-value };
 
-  --spacing-8: #{ variables.$spacing-8-value };
+  --spacing-8:  #{ variables.$spacing-8-value };
   --spacing-16: #{ variables.$spacing-16-value };
   --spacing-24: #{ variables.$spacing-24-value };
   --spacing-32: #{ variables.$spacing-32-value };
   --spacing-48: #{ variables.$spacing-48-value };
   --spacing-64: #{ variables.$spacing-64-value };
+
+  @include mixins.media-mobile {
+    --spacing-8:  #{ variables.$spacing-mobile-8-value };
+    --spacing-16: #{ variables.$spacing-mobile-16-value };
+    --spacing-24: #{ variables.$spacing-mobile-24-value };
+    --spacing-32: #{ variables.$spacing-mobile-32-value };
+    --spacing-48: #{ variables.$spacing-mobile-48-value };
+    --spacing-64: #{ variables.$spacing-mobile-64-value };
+  }
 }

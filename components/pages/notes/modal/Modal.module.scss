@@ -1,13 +1,18 @@
 @use '@styles/core/variables' as variables;
+@use '@styles/core/mixins' as mixins;
 
-.modal__enter { opacity: 0; }
+.modal__enter {
+  opacity: 0;
+}
 
 .modal__enter_active {
   opacity: 1;
   transition: opacity 200ms;
 }
 
-.modal__exit { opacity: 1; }
+.modal__exit {
+  opacity: 1;
+}
 
 .modal__exit_active {
   opacity: 0;
@@ -24,6 +29,10 @@
 
     font-weight: 500;
     font-size: 2.5rem;
+
+    @include mixins.media-mobile {
+      font-size: 1.5rem;
+    }
   }
 
   &__date {
@@ -32,6 +41,10 @@
     font-family: monospace;
     font-weight: 500;
     font-size: 1rem;
+
+    @include mixins.media-mobile {
+      font-size: 0.875rem;
+    }
   }
 
   &__image {
@@ -48,12 +61,20 @@
 
     font-size: 1.25rem;
     line-height: 1.5em;
+
+    @include mixins.media-mobile {
+      font-size: 1rem;
+    }
   }
 
   &__subtitle {
     margin-bottom: variables.$spacing-8;
     font-weight: 500;
     font-size: 1.5rem;
+
+    @include mixins.media-mobile {
+      font-size: 1.25rem;
+    }
   }
 
   &__links {
@@ -71,5 +92,9 @@
     font-family: monospace;
     line-height: 1.5em;
     font-size: 1rem;
+
+    @include mixins.media-mobile {
+      font-size: 0.875rem;
+    }
   }
 }
