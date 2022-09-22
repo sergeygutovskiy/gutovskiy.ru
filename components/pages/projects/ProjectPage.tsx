@@ -16,7 +16,7 @@ const ProjectsPage: FC<Props> = props => {
 
   return (
     <AppLayout>
-      <PageTitle text='Портфолио' />
+      <PageTitle text='Портфолио' img='/icons/bookmark.svg' />
 
       <List timeline={recentTimeline} />
     </AppLayout>

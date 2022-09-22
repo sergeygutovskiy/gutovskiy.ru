@@ -1,4 +1,7 @@
 const notes: INote[] = [
+  { id: 30, categories: [ 4, 5, 6 ], label: 'SemVer' },
+  { id: 29, categories: [ 1 ], label: 'Proxy и Reflect' },
+
   { id: 28, categories: [ 1, 2 ], label: 'Mobile 100vh hack' },
   { id: 27, categories: [ 7, 8 ], label: 'Refactoring Guru' },
   { id: 26, categories: [ 6, 8 ], label: 'Ahmad Shadeed' },
@@ -6,6 +9,7 @@ const notes: INote[] = [
   { id: 24, categories: [ 1, 3 ], label: 'Abort controller в React\'е' },
   { id: 23, categories: [ 1    ], label: 'Abort controller' },
   { id: 22, categories: [ 8    ], label: 'Vladimir Klepov as a Coder' },
+
   { id: 1,  categories: [ 2    ], label: 'HSL: цвета для программистов' },
   { id: 2,  categories: [ 2    ], label: 'White-space, overflow-wrap, text-overflow, word-break' },
   { id: 3,  categories: [ 4    ], label: 'Хеширование названий js / css файлов' },
@@ -41,6 +45,22 @@ const notesCategories: INoteCategory[] = [
 
 const fullNotes: IFullNote[] = [
   {
+    id: 30,
+    title: 'SemVer',
+    image: '/images/notes/semver.png',
+    links: [
+      'https://blog.thoughtspile.tech/2021/11/08/semver-challenges',
+    ],
+    date: '20.09.2022',
+  }, {
+    id: 29,
+    title: 'Proxy и Reflect',
+    image: '/images/notes/js-proxy.png',
+    links: [
+      'https://learn.javascript.ru/proxy',
+    ],
+    date: '20.09.2022',
+  }, {
     id: 28,
     title: 'Mobile 100vh hack',
     image: '/images/notes/100-vh-hack.webp',
@@ -84,7 +104,6 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 23,
     title: 'Abort controller',
-    image: '',
     description: 'Инструмент, позволяющий програмно останавливать сетевые запросы.',
     links: [
       'https://developer.mozilla.org/ru/docs/Web/API/AbortController'
@@ -152,6 +171,7 @@ const fullNotes: IFullNote[] = [
   }, {
     id: 7,
     title: 'Ловушка загрузки шрифтов',
+    image: '/images/notes/font-loading.png',
     description: 'При использовании внешних шрифтов (тех, что нет в системе пользователя) может возникнуть ряд проблем из-за длительной загрузки этих шрифтов: сдвиг контента, временное отсутствие какого-либо текста и т.д. Поэтому важно понимать, как в целом браузер работает со шрифтами и как можно менять это поведение.',
     date: '13.08.2021',
   }, {
