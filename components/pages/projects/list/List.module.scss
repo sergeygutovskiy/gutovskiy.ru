@@ -118,5 +118,9 @@
     @include mixins.media-laptop {
       font-size: 0.875rem;
     }
+
+    a {
+      text-decoration: underline;
+    }
   }
 }

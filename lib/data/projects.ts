@@ -1,6 +1,7 @@
 const timeline: IProjectsTimelineItem[] = [
   {
     period: '2020-2022',
+    paragraph: '<p>Проекты, которые я разработал за время работы в компании <a href="https://terexov.ru">Terexov</a>',
     projects: [
       {
         title: 'ЕРСМ',
@@ -74,6 +75,7 @@ const timeline: IProjectsTimelineItem[] = [
   },
   {
     period: "Фриланс",
+    paragraph: '<p>Проекты, которые я делал в нерабочее время для знакомых и друзей.</p>',
     projects: [
       {
         title: 'Центр системного коучинга',
@@ -99,6 +101,7 @@ const timeline: IProjectsTimelineItem[] = [
   },
   {
     period: "2022-н.в.",
+    paragraph: '<p>Проекты, в разработке которых я принимал участие за время работы в веб-отделе университета ИТМО.</p>',
     projects: [
       {
         title: 'ИТМО Абит',

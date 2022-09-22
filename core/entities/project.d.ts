@@ -10,4 +10,5 @@ interface IProject {
 interface IProjectsTimelineItem {
   period: string,
   projects: IProject[],
+  paragraph?: string,
 };

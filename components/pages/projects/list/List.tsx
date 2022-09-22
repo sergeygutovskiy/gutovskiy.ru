@@ -3,7 +3,6 @@ import { FC, Fragment } from 'react';
 import reduceClasses from '@lib/helpers/reduceClasses';
 
 import styles from './List.module.scss';
-
 import { Project } from '.';
 
 type Props = {
@@ -25,10 +24,13 @@ const List: FC<Props> = props => {
             >
               <div>
                 <h2 className={styles.period__title}>{item.period}</h2>
-                <p className={styles.period__paragraph}>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eligendi 
-                  Laborum doloremque suscipit
-                </p>
+                {
+                  item.paragraph && 
+                  <div
+                    className={styles.period__paragraph} 
+                    dangerouslySetInnerHTML={{ __html: item.paragraph }} 
+                  />
+                }
               </div>
             </div>
 
