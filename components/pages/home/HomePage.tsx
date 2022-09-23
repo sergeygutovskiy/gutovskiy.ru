@@ -18,6 +18,7 @@ const HomePage: FC = () => {
                 objectFit='cover'
                 width={520}
                 height={520}
+                placeholder='blur'
               />
           </div>
 

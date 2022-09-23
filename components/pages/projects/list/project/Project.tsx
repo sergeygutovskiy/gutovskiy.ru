@@ -25,14 +25,18 @@ const Project: FC<Props> = props => {
         <h3 className={styles.project__title}>
           {title}
         </h3>
-        
+
         {link && <a className={styles.project__link} href={link}>{link}</a>}
       </div>
 
       {
         image &&
         <div className={styles.project__image}>
-          <Image src={image} layout='fill' alt={title} />
+          <Image
+            src={image}
+            alt={title}
+            layout='fill'
+          />
         </div>
       }
 
