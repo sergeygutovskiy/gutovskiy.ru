@@ -26,5 +26,10 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ssh root@95.214.62.107
+      - name: ls -a via ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: 95.214.62.107
+          username: root
+          password: 3dmJr3ctKvq&
