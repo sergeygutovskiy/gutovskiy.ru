@@ -6,6 +6,8 @@ import { Modal as CommonModal } from '@components/common/modal';
 import useApiFullNote from '@hooks/use-api-full-note';
 
 import styles from './Modal.module.scss';
+import isHTML from '@lib/helpers/isHTML';
+import reduceClasses from '@lib/helpers/reduceClasses';
 
 type Props = {
   noteId: number | null,
@@ -65,9 +67,20 @@ const Modal: FC<Props> = props => {
                     <span className={styles.content__subtitle}>
                       Описание
                     </span>
-                    <p className={styles.content__description}>
-                      {fullNote.description}
-                    </p>
+                    {
+                      isHTML(fullNote.description)
+                        ? (
+                          <div 
+                            className={reduceClasses(styles.content__description, styles.content__description_content_html)} 
+                            dangerouslySetInnerHTML={{ __html: fullNote.description }} 
+                          />
+                        )
+                        : (
+                          <p className={styles.content__description}>
+                            {fullNote.description}
+                          </p>
+                        )
+                    }
                   </>
                 }
 

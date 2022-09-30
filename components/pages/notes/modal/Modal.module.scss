@@ -65,6 +65,23 @@
     @include mixins.media-mobile {
       font-size: 1rem;
     }
+
+    &_content_html {
+      p:not(:last-child),
+      ul:not(:last-child),
+      ol:not(:last-child) {
+        margin-bottom: 0.5em;
+      }
+
+      ul, ol {
+        padding: initial;
+        list-style: initial;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__subtitle {

@@ -2,6 +2,7 @@ export type Styles = {
   'content': string;
   'content__date': string;
   'content__description': string;
+  'content__description_content_html': string;
   'content__image': string;
   'content__link': string;
   'content__links': string;

@@ -1,4 +1,9 @@
 const notes: INote[] = [
+  { id: 34, categories: [ 7 ], label: 'Twelve-Factor App' },
+  { id: 33, categories: [ 6, 10 ], label: 'a11y и i18n' },
+  { id: 32, categories: [ 1, 5 ], label: 'JS монорепозитории — NX' },
+  { id: 31, categories: [ 2, 8 ], label: 'defensivecss.dev' },
+
   { id: 30, categories: [ 4, 5, 6 ], label: 'SemVer' },
   { id: 29, categories: [ 1 ], label: 'Proxy и Reflect' },
 
@@ -45,6 +50,59 @@ const notesCategories: INoteCategory[] = [
 
 const fullNotes: IFullNote[] = [
   {
+    id: 34,
+    title: 'Twelve-Factor App',
+    image: '/images/notes/12-factor-app-principles.png',
+    links: [
+      'https://www.redhat.com/architect/12-factor-app',
+    ],
+    date: '30.09.2022',
+  },
+
+  {
+    id: 33,
+    title: 'a11y и i18n',
+    image: '/images/notes/a11y.jpeg',
+    description: `
+      <p>
+        <strong>a11y</strong> — a(ccessibilit)y
+      </p>
+
+      <p>
+        <strong>i18n</strong> — i(nternationalizatio)n
+      </p>
+    `,
+    links: [
+      'https://www.a11yproject.com',
+      'https://www.i18next.com',
+    ],
+    date: '30.09.2022',
+  },
+
+  {
+    id: 32,
+    title: 'JS монорепозитории — NX',
+    links: [
+      'https://nx.dev',
+    ],
+    date: '30.09.2022',
+  },
+
+  {
+    id: 31,
+    title: 'defensivecss.dev',
+    description: `
+      <p>
+        Проект разработчика <a href="/notes/#26">Ahmad Shadeed</a> с советами по написанию безопасного CSS кода.
+      </p>
+      `,
+    links: [
+      'https://defensivecss.dev',
+    ],
+    date: '30.09.2022',
+  },
+
+  {
     id: 30,
     title: 'SemVer',
     image: '/images/notes/semver.png',
@@ -52,7 +110,9 @@ const fullNotes: IFullNote[] = [
       'https://blog.thoughtspile.tech/2021/11/08/semver-challenges',
     ],
     date: '20.09.2022',
-  }, {
+  },
+
+  {
     id: 29,
     title: 'Proxy и Reflect',
     image: '/images/notes/js-proxy.png',
@@ -60,7 +120,9 @@ const fullNotes: IFullNote[] = [
       'https://learn.javascript.ru/proxy',
     ],
     date: '20.09.2022',
-  }, {
+  },
+
+  {
     id: 28,
     title: 'Mobile 100vh hack',
     image: '/images/notes/100-vh-hack.webp',
@@ -68,7 +130,9 @@ const fullNotes: IFullNote[] = [
       'https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 27,
     title: 'refactoring.guru',
     image: '/images/notes/refactoring.guru.png',
@@ -76,7 +140,9 @@ const fullNotes: IFullNote[] = [
       'https://refactoring.guru',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 26,
     title: 'Ahmad Shadeed',
     image: '/images/notes/shadeed.jpg',
@@ -84,7 +150,9 @@ const fullNotes: IFullNote[] = [
       'https://ishadeed.com/',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 25,
     title: 'iOS best architecture',
     image: '/images/notes/ios-best.jpg',
@@ -92,7 +160,9 @@ const fullNotes: IFullNote[] = [
       'https://github.com/Exey/iOS-Best-Architecture',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 24,
     title: 'Abort controller в React\'е',
     image: '/images/notes/abort-controller-in-react.png',
@@ -101,7 +171,9 @@ const fullNotes: IFullNote[] = [
       'https://medium.com/@cis.bart/react-abort-controller-and-onclick-async-calls-aa4776772262',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 23,
     title: 'Abort controller',
     description: 'Инструмент, позволяющий програмно останавливать сетевые запросы.',
@@ -109,7 +181,9 @@ const fullNotes: IFullNote[] = [
       'https://developer.mozilla.org/ru/docs/Web/API/AbortController'
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 22,
     title: 'Vladimir Klepov as a Coder',
     description: 'Хороший сайт с заметками и статьями по фронту.',
@@ -117,7 +191,9 @@ const fullNotes: IFullNote[] = [
       'https://blog.thoughtspile.tech/',
     ],
     date: '19.09.2022',
-  }, {
+  },
+
+  {
     id: 1,
     title: 'HSL: цвета для программистов',
     image: '/images/notes/hsl.jpg',
@@ -126,7 +202,9 @@ const fullNotes: IFullNote[] = [
       'https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl',
     ],
     date: '25.08.2021',
-  }, {
+  },
+
+  {
     id: 2,
     title: 'White-space, overflow-wrap, text-overflow, word-break',
     description: 'Много свойств для всевозможного регулирования перекрытия и переноса текста в блоках.',
@@ -137,12 +215,16 @@ const fullNotes: IFullNote[] = [
       'https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap',
     ],
     date: '23.08.2021',
-  }, {
+  },
+
+  {
     id: 3,
     title: 'Хеширование названий js / css файлов',
     description: 'Делаем из app.css app-ad13sdsf23.css, и избавляем пользователей от проблемы использования закешированных старых ресурсов',
     date: '21.08.2021',
-  }, {
+  },
+
+  {
     id: 4,
     title: 'Progressive JPEG',
     image: '/images/notes/baseline_progressive_jpeg_compare.webp',
@@ -151,7 +233,9 @@ const fullNotes: IFullNote[] = [
       'https://walnut.team/blog/pogovorim-o-tehnologiyah/progressive-jpeg-chto-za-zver',
     ],
     date: '19.08.2021',
-  }, {
+  },
+
+  {
     id: 5,
     title: 'Детали работы событий в JS',
     description: 'Всплытие, погружение, делегирование и значение других умных слов.',
@@ -159,7 +243,9 @@ const fullNotes: IFullNote[] = [
       'https://learn.javascript.ru/events',
     ],
     date: '16.08.2021',
-  }, {
+  },
+
+  {
     id: 6,
     title: 'Клавиатурная навигация',
     image: '/images/notes/focus-tree.png',
@@ -168,24 +254,32 @@ const fullNotes: IFullNote[] = [
       'https://www.okta.com/identity-101/authentication-vs-authorization',
     ],
     date: '15.08.2021',
-  }, {
+  },
+
+  {
     id: 7,
     title: 'Ловушка загрузки шрифтов',
     image: '/images/notes/font-loading.png',
     description: 'При использовании внешних шрифтов (тех, что нет в системе пользователя) может возникнуть ряд проблем из-за длительной загрузки этих шрифтов: сдвиг контента, временное отсутствие какого-либо текста и т.д. Поэтому важно понимать, как в целом браузер работает со шрифтами и как можно менять это поведение.',
     date: '13.08.2021',
-  }, {
+  },
+
+  {
     id: 8,
     title: 'Семантическая верстка',
     image: '/images/notes/semantic-html.jpg',
     description: 'Как избавиться от бесконечных div\'ов в html разметке и сделать её более читаемой и доступной.',
     date: '10.08.2021',
-  }, {
+  },
+
+  {
     id: 9,
     title: 'Callback Hell',
     image: '/images/notes/callback-hell.png',
     date: '8.08.2021',
-  }, {
+  },
+
+  {
     id: 10,
     title: 'API',
     description: 'Как сделать функции вашего приложения доступными для других сервисов.',
@@ -193,7 +287,9 @@ const fullNotes: IFullNote[] = [
       'https://habr.com/ru/post/464261',
     ],
     date: '5.08.2021',
-  }, {
+  },
+
+  {
     id: 11,
     title: 'Авторизация или аутентификация',
     description: 'В общих словах: авторизация - проверка входа пользователя в свой аккаунт, аутентификация - выставление пользователю определенных ролей, прав доступа.',
@@ -201,7 +297,9 @@ const fullNotes: IFullNote[] = [
       'https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization',
     ],
     date: '01.08.2021',
-  }, {
+  },
+
+  {
     id: 12,
     title: 'CSS препроцессоры',
     description: 'Как внести в написание стилей чуть-чуть больше программирования с функциями, классами и даже наследованием.',
@@ -209,7 +307,9 @@ const fullNotes: IFullNote[] = [
       'https://www.freecodecamp.org/news/css-preprocessors',
     ],
     date: '30.07.2021',
-  }, {
+  },
+
+  {
     id: 13,
     title: 'Dart - альтернатива JS',
     description: 'Google сделала свой язык, который можно использовать для web\'а и мобильной кроссплатформенной разработки.',
@@ -217,7 +317,9 @@ const fullNotes: IFullNote[] = [
       'https://dart.dev/overview',
     ],
     date: '21.07.2021',
-  }, {
+  },
+
+  {
     id: 14,
     title: 'Отмена загрузки картинок на определенных экранах',
     description: 'Бывает, что на экране определенного размера нужно прятать изображение. Это можно сделать через display: none, но у такого подхода есть недостаток: картинка все равно будет загружаться хоть и не показываться. Есть решение получше, использующее современный тэг picture, которое позволяет избавиться от этой проблемы (пусть и через некий костыль ).',
@@ -225,7 +327,9 @@ const fullNotes: IFullNote[] = [
       'https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e',
     ],
     date: '16.07.2021',
-  }, {
+  },
+
+  {
     id: 15,
     title: 'Mobile / Desktop first',
     description: 'Сайт можно делать для ПК и адаптировать под мобилки, а можно и наоборот: сперва под телефон, затем - под ПК. Существует ряд критериев, чтобы определить каким из подходов стоит пользоваться.',
@@ -233,7 +337,9 @@ const fullNotes: IFullNote[] = [
       'https://ishadeed.com/article/the-state-of-mobile-first-and-desktop-first',
     ],
     date: '15.07.2021',
-  }, {
+  },
+
+  {
     id: 16,
     title: 'Соотношение сторон в картинках',
     image: '/images/notes/share-crop-aspect-ratio.jpg',
@@ -242,13 +348,17 @@ const fullNotes: IFullNote[] = [
       'https://css-tricks.com/aspect-ratio-boxes',
     ],
     date: '11.07.2021',
-  }, {
+  },
+
+  {
     id: 17,
     title: 'FCP и беда LCP',
     image: '/images/notes/fcp-lcp.jpg',
     description: 'Как узнать, за какое среднее время пользователю показывается ваш сайт (FCP), а также как решить проблему с долгой отрисовкой страницы (LCP).',
     date: '10.07.2021',
-  }, {
+  },
+
+  {
     id: 18,
     title: 'RTL и LTR',
     image: '/images/notes/rtl-ltr.jpg',
@@ -257,7 +367,9 @@ const fullNotes: IFullNote[] = [
       'https://habr.com/ru/post/484886',
     ],
     date: '05.06.2021',
-  }, {
+  },
+
+  {
     id: 19,
     title: 'Webpack',
     image: '/images/notes/webpack.png',

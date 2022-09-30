@@ -12,7 +12,7 @@ type Props = {
 const ProjectsPage: FC<Props> = props => {
   const { timeline } = props;
 
-  const recentTimeline = timeline.reverse().map(item => ({ ...item, projects: item.projects.reverse() }));
+  const recentTimeline = [ ...timeline ].reverse().map(item => ({ ...item, projects: [ ...item.projects ].reverse() }));
 
   return (
     <AppLayout>

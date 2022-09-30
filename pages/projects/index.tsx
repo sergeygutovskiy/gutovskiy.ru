@@ -14,7 +14,7 @@ const Projects: NextPage<Props> = props => {
 export default Projects;
 
 export function getStaticProps(): GetStaticPropsResult<Props> {
-  const timeline = [ ...apiTimeline ];
+  const timeline = apiTimeline;
 
   return {
     props: { 
