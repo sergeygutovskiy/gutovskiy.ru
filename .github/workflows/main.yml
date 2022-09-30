@@ -30,6 +30,6 @@ jobs:
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: /home/user/web/gutovskiy.ru/build.sh
-          host: 95.214.62.107
-          username: root
-          password: 3dmJr3ctKvq&
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
