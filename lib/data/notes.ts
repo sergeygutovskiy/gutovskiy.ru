@@ -1,4 +1,6 @@
 const notes: INote[] = [
+  { id: 35, categories: [ 6, 7 ], label: 'Microfrontend :o' },
+
   { id: 34, categories: [ 7 ], label: 'Twelve-Factor App' },
   { id: 33, categories: [ 6, 10 ], label: 'a11y и i18n' },
   { id: 32, categories: [ 1, 5 ], label: 'JS монорепозитории — NX' },
@@ -15,23 +17,23 @@ const notes: INote[] = [
   { id: 23, categories: [ 1    ], label: 'Abort controller' },
   { id: 22, categories: [ 8    ], label: 'Vladimir Klepov as a Coder' },
 
-  { id: 1,  categories: [ 2    ], label: 'HSL: цвета для программистов' },
+  { id: 1,  categories: [ 2    ], label: 'HSL цвета' },
   { id: 2,  categories: [ 2    ], label: 'White-space, overflow-wrap, text-overflow, word-break' },
   { id: 3,  categories: [ 4    ], label: 'Хеширование названий js / css файлов' },
   { id: 4,  categories: [ 4, 6 ], label: 'Progressive JPEG' },
   { id: 5,  categories: [ 1    ], label: 'Детали работы событий в JS' },
   { id: 6,  categories: [ 4    ], label: 'Клавиатурная навигация' },
-  { id: 7,  categories: [ 2    ], label: 'Ловушка загрузки шрифтов' },
+  { id: 7,  categories: [ 2    ], label: 'Детали загрузки шрифтов' },
   { id: 8,  categories: [ 4    ], label: 'Семантическая верстка' },
   { id: 9,  categories: [ 6    ], label: 'Callback Hell' },
   { id: 10, categories: [ 5    ], label: 'API' },
   { id: 11, categories: [ 10   ], label: 'Авторизация или аутентификация' },
   { id: 12, categories: [ 2    ], label: 'CSS препроцессоры' },
   { id: 13, categories: [ 5    ], label: 'Dart - альтернатива JS' },
-  { id: 14, categories: [ 2    ], label: 'Отмена загрузки картинок на определенных экранах' },
+  { id: 14, categories: [ 2    ], label: 'Картинки загружаются и при display: none' },
   { id: 15, categories: [ 2    ], label: 'Mobile / Desktop first' },
   { id: 16, categories: [ 2    ], label: 'Соотношение сторон в картинках' },
-  { id: 17, categories: [ 4    ], label: 'FCP и беда LCP' },
+  { id: 17, categories: [ 4    ], label: 'FCP и LCP' },
   { id: 18, categories: [ 4, 6 ], label: 'RTL и LTR' },
   { id: 19, categories: [ 5    ], label: 'Webpack' },
 ];
@@ -50,6 +52,17 @@ const notesCategories: INoteCategory[] = [
 
 const fullNotes: IFullNote[] = [
   {
+    id: 35,
+    title: 'Microfrontend :o',
+    image: '/images/notes/microfrontend.png',
+    links: [
+      'https://micro-frontends.org/',
+      'https://medium.com/stepstone-tech/microfrontends-extending-service-oriented-architecture-to-frontend-development-part-1-120b71c87b68',
+    ],
+    date: '03.10.2022',
+  },
+
+  {
     id: 34,
     title: 'Twelve-Factor App',
     image: '/images/notes/12-factor-app-principles.png',
@@ -65,11 +78,11 @@ const fullNotes: IFullNote[] = [
     image: '/images/notes/a11y.jpeg',
     description: `
       <p>
-        <strong>a11y</strong> — a(ccessibilit)y
+        <code>a11y</code> — a(ccessibilit)y
       </p>
 
       <p>
-        <strong>i18n</strong> — i(nternationalizatio)n
+        <code>i18n</code> — i(nternationalizatio)n
       </p>
     `,
     links: [
@@ -82,6 +95,7 @@ const fullNotes: IFullNote[] = [
   {
     id: 32,
     title: 'JS монорепозитории — NX',
+    image: '/images/notes/nx.png',
     links: [
       'https://nx.dev',
     ],
@@ -91,6 +105,7 @@ const fullNotes: IFullNote[] = [
   {
     id: 31,
     title: 'defensivecss.dev',
+    image: '/images/notes/defensive-css.png',
     description: `
       <p>
         Проект разработчика <a href="/notes/#26">Ahmad Shadeed</a> с советами по написанию безопасного CSS кода.
@@ -195,7 +210,7 @@ const fullNotes: IFullNote[] = [
 
   {
     id: 1,
-    title: 'HSL: цвета для программистов',
+    title: 'HSL цвета',
     image: '/images/notes/hsl.jpg',
     description: 'В css свойство color обычно задается через hex либо rgb, но еще существует функция hsl, которая не используют принцип сочетания rbg оттенков.',
     links: [
@@ -220,7 +235,12 @@ const fullNotes: IFullNote[] = [
   {
     id: 3,
     title: 'Хеширование названий js / css файлов',
-    description: 'Делаем из app.css app-ad13sdsf23.css, и избавляем пользователей от проблемы использования закешированных старых ресурсов',
+    description: `
+      <p>
+        Делаем из <code>app.css</code> <code>app-ad13sdsf23.css</code>, 
+        и избавляем пользователей от проблемы использования закешированных старых ресурсов.
+      </p>
+    `,
     date: '21.08.2021',
   },
 
@@ -249,7 +269,13 @@ const fullNotes: IFullNote[] = [
     id: 6,
     title: 'Клавиатурная навигация',
     image: '/images/notes/focus-tree.png',
-    description: 'По интерактивным элементам сайта можно перемещаться используя tab\'ы. Для выделения текущего активного элемента на странице используется состояние :focus. Как правило разработчики забивают на оформление этого свойства, что приводит к плохому опыту пользования у юзеров.',
+    description: `
+      <p>
+        По интерактивным элементам сайта можно перемещаться используя tab'ы. 
+        Для выделения текущего активного элемента на странице используется состояние <code>:focus</code>. 
+        Как правило разработчики забивают на оформление этого свойства, что приводит к плохому опыту пользования у юзеров.
+      </p>
+    `,
     links: [
       'https://www.okta.com/identity-101/authentication-vs-authorization',
     ],
@@ -258,7 +284,7 @@ const fullNotes: IFullNote[] = [
 
   {
     id: 7,
-    title: 'Ловушка загрузки шрифтов',
+    title: 'Детали загрузки шрифтов',
     image: '/images/notes/font-loading.png',
     description: 'При использовании внешних шрифтов (тех, что нет в системе пользователя) может возникнуть ряд проблем из-за длительной загрузки этих шрифтов: сдвиг контента, временное отсутствие какого-либо текста и т.д. Поэтому важно понимать, как в целом браузер работает со шрифтами и как можно менять это поведение.',
     date: '13.08.2021',
@@ -321,8 +347,16 @@ const fullNotes: IFullNote[] = [
 
   {
     id: 14,
-    title: 'Отмена загрузки картинок на определенных экранах',
-    description: 'Бывает, что на экране определенного размера нужно прятать изображение. Это можно сделать через display: none, но у такого подхода есть недостаток: картинка все равно будет загружаться хоть и не показываться. Есть решение получше, использующее современный тэг picture, которое позволяет избавиться от этой проблемы (пусть и через некий костыль ).',
+    title: 'Картинки загружаются и при display: none',
+    description: `
+      <p>
+        Бывает, что на экране определенного размера нужно прятать изображение. 
+        Это можно сделать через <code>display: none</code>, но у такого подхода есть недостаток: 
+        картинка все равно будет загружаться хоть и не показываться. 
+        Есть решение лучше, использующее современный тэг <code>picture</code>, 
+        которое позволяет избавиться от этой проблемы.
+      </p>
+    `,
     links: [
       'https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e',
     ],
@@ -343,7 +377,12 @@ const fullNotes: IFullNote[] = [
     id: 16,
     title: 'Соотношение сторон в картинках',
     image: '/images/notes/share-crop-aspect-ratio.jpg',
-    description: 'Как делать адаптивные картинки с определенным соотношением сторон используя костыль с padding или новое свойство aspect-ratio.',
+    description: `
+      <p>
+        Как делать адаптивные картинки с определенным соотношением сторон 
+        используя прием с <code>padding</code> или новое свойство <code>aspect-ratio</code>.
+      </p>
+    `,
     links: [
       'https://css-tricks.com/aspect-ratio-boxes',
     ],
@@ -352,7 +391,7 @@ const fullNotes: IFullNote[] = [
 
   {
     id: 17,
-    title: 'FCP и беда LCP',
+    title: 'FCP и LCP',
     image: '/images/notes/fcp-lcp.jpg',
     description: 'Как узнать, за какое среднее время пользователю показывается ваш сайт (FCP), а также как решить проблему с долгой отрисовкой страницы (LCP).',
     date: '10.07.2021',
