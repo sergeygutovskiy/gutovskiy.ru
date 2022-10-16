@@ -33,6 +33,7 @@
     margin-bottom: variables.$spacing-24;
 
     aspect-ratio: 16 / 9;
+    background-color: variables.$color-theme-foreground;
   }
 
   &__paragraph {

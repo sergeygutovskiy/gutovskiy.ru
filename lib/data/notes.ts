@@ -1,4 +1,9 @@
 const notes: INote[] = [
+  { id: 38, categories: [ 1, 2, 5 ], label: 'Как собирается web-страница' },
+  
+  { id: 37, categories: [ 1 ], label: 'Event Loop' },
+  { id: 36, categories: [ 7 ], label: 'Cohesion и Coupling' },
+  
   { id: 35, categories: [ 6, 7 ], label: 'Microfrontend :o' },
 
   { id: 34, categories: [ 7 ], label: 'Twelve-Factor App' },
@@ -51,6 +56,46 @@ const notesCategories: INoteCategory[] = [
 ];
 
 const fullNotes: IFullNote[] = [
+  {
+    id: 38,
+    title: 'Как собирается web-страница',
+    image: '/images/notes/html-building.webp',
+    links: [
+      'https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work',
+    ],
+    date: '17.10.2022',
+  },
+
+  {
+    id: 37,
+    title: 'Event Loop',
+    image: '/images/notes/event-loop.gif',
+    description: `
+      <p>
+        По <a href="http://latentflip.com/loupe">этой ссылке</a> 
+        можно попробовать песочницу, 
+        в которой показывается, что происходит внутри <code>event loop</code>'а.
+      </p>
+    `,
+    links: [
+      'https://suneetbansal.medium.com/event-loop-macro-vs-micro-task-javascript-bd4296768b64',
+      'https://www.youtube.com/watch?v=8aGhZQkoFbQ',
+      'https://www.youtube.com/watch?v=cCOL7MC4Pl0',
+    ],
+    date: '17.10.2022',
+  },
+  
+  {
+    id: 36,
+    title: 'Cohesion и Coupling',
+    image: '/images/notes/coupling-and-cohesion.png',
+    links: [
+      'https://habr.com/ru/post/568216',
+      'https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling',
+    ],
+    date: '17.10.2022',
+  },
+
   {
     id: 35,
     title: 'Microfrontend :o',
